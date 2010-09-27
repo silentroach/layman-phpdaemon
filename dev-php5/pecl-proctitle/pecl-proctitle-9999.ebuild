@@ -6,7 +6,7 @@ S="${WORKDIR}/proctitle"
 
 inherit subversion php-ext-source-r1 confutils
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="PHP proctitle extension."
 SLOT="0"
