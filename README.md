@@ -1,5 +1,8 @@
+PHPDaemon overlay
+=================
+
 Add it to Layman
-================
+----------------
 
 To add this overlay you need to add this url to your overlays section of layman.cfg:
 
