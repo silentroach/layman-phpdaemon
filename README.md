@@ -1,6 +1,8 @@
 PHPDaemon overlay
 =================
 
+An overlay to install [[PHPDaemon|http://github.com/silentroach/layman-phpdaemon]] in right way in Gentoo Linux.
+
 Add it to Layman
 ----------------
 
