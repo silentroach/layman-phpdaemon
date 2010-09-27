@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name><![CDATA[phpdaemon]]></name>
+    <description><![CDATA[PHPDaemon overlay]]></description>
+    <homepage>http://github.com/kakserpom/phpdaemon</homepage>
+    <owner>
+      <email>igor.kalashnikov@gmail.com</email>
+    </owner>
+    <source type="git">git://github.com/silentroach/layman-phpdaemon.git</source>
+  </repo>
+</repositories>
