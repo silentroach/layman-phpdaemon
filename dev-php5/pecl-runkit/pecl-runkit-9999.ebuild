@@ -1,12 +1,8 @@
-EAPI="2"
-
 PHP_EXT_NAME="runkit"
-PHP_EXT_PECL_PKG="RUNKIT"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 
-MY_P="${PHP_EXT_PECL_PKG}-${PV}"
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/runkit"
 
 inherit git php-ext-source-r1 confutils
 
@@ -32,15 +28,13 @@ src_unpack() {
 	php-ext-source-r1_phpize
 }
 
-src_configure() {
+src_compile() {
 	my_conf="--enable-runkit"
 
 	enable_extension_enable "runkit-modify" "modify" 0
 	enable_extension_enable "runkit-super" "super" 0
 	enable_extension_enable "runkit-sandbox" "sandbox" 0
-}
-
-src_compile() {
+	
 	php-ext-source-r1_src_compile
 }
 
