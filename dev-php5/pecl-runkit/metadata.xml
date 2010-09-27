@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>igor.kalashnikov@gmail.com</email>
+		<name>Kalashnikov Igor</name>
+	</maintainer>
+	<use>
+		<flag name='modify'>Enables runtime manipulation</flag>
+		<flag name='super'>Enables registration of user-defined autoglobals</flag>
+		<flag name='sandbox'>Enables Runkit_Sandbox</flag>
+	</use>
+</pkgmetadata>
