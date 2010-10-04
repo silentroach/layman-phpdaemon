@@ -27,7 +27,6 @@ src_unpack() {
 	cd "${S}"
 
 	mv conf/logrotate conf/phpd_rotate
-	mv conf/phpdaemon.conf.php conf/phpd.conf
 }
 
 src_install() {
@@ -74,18 +73,9 @@ src_install() {
 	doins conf/phpd_rotate || die
 
 	insinto /etc/phpd
-	doins conf/phpd.conf || die
+	doins conf/phpd.conf.example || die
 	doins conf/appResolver.php || die
 
 	dosym ${BASE}/bin/phpdaemon /usr/bin/phpd
 }
-
-
-
-
-
-
-
-
-
 
