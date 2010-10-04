@@ -65,6 +65,7 @@ src_install() {
 
 	insinto ${BASE}/conf
 	doins conf/crossdomain.xml || die
+	doins conf/appResolver.php || die
 
 	insinto ${BASE}/lib
 	doins lib/*.php || die
@@ -74,7 +75,6 @@ src_install() {
 
 	insinto /etc/phpd
 	doins conf/phpd.conf.example || die
-	doins conf/appResolver.php || die
 
 	dosym ${BASE}/bin/phpdaemon /usr/bin/phpd
 }
