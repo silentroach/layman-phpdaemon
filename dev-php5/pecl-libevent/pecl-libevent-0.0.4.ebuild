@@ -12,7 +12,10 @@ DESCRIPTION="PHP libevent extension."
 SLOT="0"
 IUSE=""
 
-DEPEND=">=dev-lang/php-5.1.3"
+DEPEND="
+	>=dev-lang/php-5.1.3
+	dev-libs/libevent
+"
 RDEPEND="${DEPEND}"
 
 HOMEPAGE="http://pecl.php.net/package/libevent"
