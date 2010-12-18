@@ -1,10 +1,12 @@
+EAPI=2
+
 PHP_EXT_NAME="runkit"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 
 S="${WORKDIR}/runkit-${PV}"
 
-inherit php-ext-source-r1 confutils
+inherit php-ext-source-r2 confutils
 
 KEYWORDS="amd64 x86"
 
@@ -18,8 +20,6 @@ RDEPEND="${DEPEND}"
 HOMEPAGE="http://github.com/zenovich/runkit"
 SRC_URI="http://github.com/downloads/zenovich/runkit/runkit-${PV}.tgz"
 
-need_php_by_category
-
 src_compile() {
 	my_conf="--enable-runkit"
 
@@ -27,9 +27,9 @@ src_compile() {
 	enable_extension_enable "runkit-super" "super" 0
 	enable_extension_enable "runkit-sandbox" "sandbox" 0
 
-	php-ext-source-r1_src_compile
+	php-ext-source-r2_src_compile
 }
 
 src_install() {
-	php-ext-source-r1_src_install
+	php-ext-source-r2_src_install
 }

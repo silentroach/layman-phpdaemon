@@ -1,3 +1,5 @@
+EAPI=2
+
 PHP_EXT_NAME="runkit"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
@@ -19,13 +21,11 @@ HOMEPAGE="http://github.com/zenovich/runkit"
 EGIT_REPO_URI="git://github.com/zenovich/runkit.git"
 unset SRC_URI
 
-need_php_by_category
-
 src_unpack() {
 	git_src_unpack
 	cd "${S}"
 
-	php-ext-source-r1_phpize
+	php-ext-source-r2_phpize
 }
 
 src_compile() {
@@ -34,10 +34,10 @@ src_compile() {
 	enable_extension_enable "runkit-modify" "modify" 0
 	enable_extension_enable "runkit-super" "super" 0
 	enable_extension_enable "runkit-sandbox" "sandbox" 0
-	
-	php-ext-source-r1_src_compile
+
+	php-ext-source-r2_src_compile
 }
 
 src_install() {
-	php-ext-source-r1_src_install
+	php-ext-source-r2_src_install
 }
