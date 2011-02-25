@@ -6,7 +6,7 @@ PHP_EXT_ZENDEXT="no"
 
 S="${WORKDIR}/runkit"
 
-inherit git php-ext-source-r1 confutils
+inherit git php-ext-source-r2 confutils
 
 KEYWORDS="~amd64 ~x86"
 
@@ -24,8 +24,6 @@ unset SRC_URI
 src_unpack() {
 	git_src_unpack
 	cd "${S}"
-
-	php-ext-source-r2_phpize
 }
 
 src_compile() {

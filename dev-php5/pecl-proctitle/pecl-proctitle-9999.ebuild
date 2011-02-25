@@ -24,8 +24,6 @@ unset SRC_URI
 src_unpack() {
 	subversion_src_unpack
 	cd "${S}"
-
-	php-ext-source-r2_phpize
 }
 
 src_compile() {
